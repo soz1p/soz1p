@@ -54,7 +54,7 @@ flowchart LR
 삼각형 면적 기반 피부 인장 제약 설계 및 CUDA PBD 통합.<br><br>
 <b>+3.23–7.66%</b> 병렬 리샘플링 시간 증가율<br>
 <sub>2025년 게재 논문 · 3개 해상도 비교</sub><br><br>
-<a href="https://doi.org/10.15701/kcgs.2025.31.4.21">Publication ↗</a>
+<a href="https://www.kci.go.kr/kciportal/landing/article.kci?arti_id=ART003238324">Publication ↗</a>
 <br><a href="https://github.com/soz1p/STC-Showcase">Research Overview ↗</a>
 </td>
 <td width="50%" valign="top">
@@ -105,7 +105,7 @@ NeRF RGBA 볼륨과 PBD 격자의 결합, float4 샘플링 및 병렬 리샘플�
 
 | Year | Research |
 | :---: | :--- |
-| **2025** | **STC: A Skin Tension Constraint Model for Position-Based Dynamics** <br> First author · 한국컴퓨터그래픽스학회 논문지 31(4), 21–31 · [DOI](https://doi.org/10.15701/kcgs.2025.31.4.21) |
+| **2025** | **STC: A Skin Tension Constraint Model for Position-Based Dynamics** <br> First author · 한국컴퓨터그래픽스학회 논문지 31(4), 21–31 · [KCI](https://www.kci.go.kr/kciportal/landing/article.kci?arti_id=ART003238324) |
 | **2024** | **NeRF, PBD 및 병렬 리샘플링을 결합한 실시간 3D 볼륨 변형체 시각화** <br> Co-author · 한국컴퓨터그래픽스학회 논문지 30(3), 189–198 · [KCI](https://www.kci.go.kr/kciportal/landing/article.kci?arti_id=ART003103457) |
 | **2026** | **이방성 피부 장력 제약(ASTC)을 이용한 PBD 기반 방향성 절개 반응** <br> Co-author · 한국컴퓨터그래픽스학회 학술대회 포스터 |
 
