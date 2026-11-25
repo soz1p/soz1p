@@ -17,6 +17,10 @@ Graphics engineer with an M.S. in Computer Engineering from Hansung University (
 
 물리 시뮬레이션과 볼륨 렌더링을 연구해 온 그래픽스 개발자입니다. 데이터 처리부터 GPU 연산, 렌더링, GUI까지 하나의 소프트웨어로 연결합니다.
 
+<p align="center">
+  <img src="assets/contribution-voxel.svg" alt="Voxel map of selected public project commit activity" width="100%">
+</p>
+
 ## 02 / Selected Projects
 
 <table>
