@@ -46,6 +46,35 @@ def fetch(login, token):
     return cal['totalContributions'], weeks
 
 
+def scrape(login):
+    """Read the public contribution calendar page (what any visitor sees,
+    including private-contribution counts when the profile shows them)."""
+    import re
+    req = urllib.request.Request(f'https://github.com/users/{login}/contributions',
+                                 headers={'User-Agent': 'contribution-cloth'})
+    with urllib.request.urlopen(req, timeout=30) as r:
+        html = r.read().decode('utf-8', 'replace')
+    dates = dict(re.findall(r'data-date="(\d{4}-\d\d-\d\d)"[^>]*?id="([^"]+)"', html))
+    dates.update({d: i for i, d in re.findall(r'id="([^"]+)"[^>]*?data-date="(\d{4}-\d\d-\d\d)"', html)})
+    counts = {}
+    for cid, txt in re.findall(r'<tool-tip[^>]*for="([^"]+)"[^>]*>([^<]*)</tool-tip>', html):
+        m = re.match(r'\s*(\d+|No) contribution', txt)
+        if m:
+            counts[cid] = 0 if m.group(1) == 'No' else int(m.group(1))
+    days = sorted((d, counts.get(cid, 0)) for d, cid in dates.items())
+    if not days:
+        return None
+    weeks, cur = [], []
+    for d, c in days:
+        wd = (dt.date.fromisoformat(d).weekday() + 1) % 7
+        if wd == 0 and cur:
+            weeks.append(cur); cur = []
+        cur.append((d, c, wd))
+    if cur:
+        weeks.append(cur)
+    return sum(c for _, c in days), weeks
+
+
 def empty_weeks():
     today = dt.date.today()
     start = today - dt.timedelta(days=364 + (today.weekday() + 1) % 7)
@@ -178,10 +207,21 @@ def main():
     login = sys.argv[1] if len(sys.argv) > 1 else 'soz1p'
     outdir = sys.argv[2] if len(sys.argv) > 2 else 'assets'
     token = os.environ.get('GITHUB_TOKEN')
-    if '--empty' in sys.argv or not token:
-        total, weeks = empty_weeks()
-    else:
-        total, weeks = fetch(login, token)
+    total, weeks = empty_weeks()
+    if '--empty' not in sys.argv:
+        if token:
+            try:
+                total, weeks = fetch(login, token)
+            except Exception as e:  # keep going with the public page
+                print('GraphQL failed:', e)
+        if total == 0:
+            # The Actions token cannot see private-contribution counts; the public page can.
+            try:
+                got = scrape(login)
+                if got and got[0] > 0:
+                    total, weeks = got
+            except Exception as e:
+                print('Public calendar failed:', e)
     os.makedirs(outdir, exist_ok=True)
     for mode in THEMES:
         with open(os.path.join(outdir, f'contribution-cloth-{mode}.svg'), 'w') as f:
