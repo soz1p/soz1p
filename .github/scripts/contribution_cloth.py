@@ -40,7 +40,7 @@ def fetch(login, token):
     with urllib.request.urlopen(req, timeout=30) as r:
         data = json.load(r)
     if 'errors' in data:
-        raise SystemExit(f'GraphQL error: {data["errors"]}')
+        raise RuntimeError(f'GraphQL error: {data["errors"]}')
     cal = data['data']['user']['contributionsCollection']['contributionCalendar']
     weeks = [[(d['date'], d['contributionCount'], d['weekday']) for d in w['contributionDays']] for w in cal['weeks']]
     return cal['totalContributions'], weeks
@@ -89,6 +89,68 @@ def empty_weeks():
     return 0, weeks
 
 
+
+def public_commits(login, token):
+    """Count unique commits authored by login in the eight public portfolio repositories.
+    Fail closed on API errors rather than publishing a misleading empty calendar.
+    """
+    from urllib.parse import urlencode, quote
+    from collections import Counter
+    today = dt.datetime.now(dt.timezone.utc).date()
+    start = today - dt.timedelta(days=364)
+    names = [login, 'jeon-sojin-portfolio', 'STC-Showcase', 'VDR-Showcase',
+             'NeuralDynaRender-Showcase', 'QtGTCG-Showcase',
+             'Edge-of-Survival-Showcase', 'Fire-Evacuation-Showcase']
+    headers = {'Accept': 'application/vnd.github+json',
+               'User-Agent': 'contribution-cloth',
+               'X-GitHub-Api-Version': '2022-11-28'}
+    if token:
+        headers['Authorization'] = f'Bearer {token}'
+    seen, counts = set(), Counter()
+    for name in names:
+        base = f'https://api.github.com/repos/{quote(login, safe="")}/{quote(name, safe="")}'
+        # Never aggregate commits from a repository that has become private.
+        req = urllib.request.Request(base, headers=headers)
+        with urllib.request.urlopen(req, timeout=45) as response:
+            metadata = json.load(response)
+        if metadata.get('visibility') != 'public':
+            print(f'Skipping non-public repository: {name}')
+            continue
+        page = 1
+        while True:
+            params = urlencode({'author': login, 'since': start.isoformat() + 'T00:00:00Z',
+                                'until': today.isoformat() + 'T23:59:59Z',
+                                'per_page': 100, 'page': page})
+            req = urllib.request.Request(base + '/commits?' + params, headers=headers)
+            with urllib.request.urlopen(req, timeout=45) as response:
+                batch = json.load(response)
+            if not isinstance(batch, list):
+                raise ValueError(f'Unexpected commit response for {name}')
+            for commit in batch:
+                sha = commit['sha']
+                author = commit.get('author') or {}
+                if author.get('login', '').lower() != login.lower() or sha in seen:
+                    continue
+                seen.add(sha)
+                date = dt.datetime.fromisoformat(commit['commit']['author']['date'].replace('Z', '+00:00')).astimezone(dt.timezone.utc).date()
+                if start <= date <= today:
+                    counts[date] += 1
+            if len(batch) < 100:
+                break
+            page += 1
+    weeks, week = [], []
+    day = start
+    while day <= today:
+        wd = (day.weekday() + 1) % 7
+        if wd == 0 and week:
+            weeks.append(week)
+            week = []
+        week.append((day.isoformat(), counts[day], wd))
+        day += dt.timedelta(days=1)
+    if week:
+        weeks.append(week)
+    return sum(counts.values()), weeks
+
 def mix(a, b, t):
     a = [int(a[i:i + 2], 16) for i in (1, 3, 5)]
     b = [int(b[i:i + 2], 16) for i in (1, 3, 5)]
@@ -104,7 +166,9 @@ def level(c, q):
     return 4
 
 
-def draw(total, weeks, mode, login):
+def draw(total, weeks, mode, login, source='calendar'):
+    metric = 'public portfolio commits' if source == 'public' else 'GitHub contributions'
+    source_note = 'Selected public repositories · default branches · UTC' if source == 'public' else 'GitHub contribution calendar'
     th = THEMES[mode]
     W, H = 1200, 330
     ncol = len(weeks)
@@ -148,7 +212,7 @@ def draw(total, weeks, mode, login):
     ramp = RAMP[mode]
 
     out = [f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" role="img" '
-           f'aria-label="{total} GitHub contributions by {login} in the last year, drawn as a pinned cloth">',
+           f'aria-label="{total} {metric} by {login} in the last year, drawn as a pinned cloth">',
            '<defs>',
            f'<filter id="b" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="70"/></filter>',
            f'<clipPath id="c"><rect width="{W}" height="{H}" rx="22"/></clipPath>',
@@ -160,7 +224,7 @@ def draw(total, weeks, mode, login):
 
     out.append(f'<text x="{x0}" y="50" font-family="Archivo,Helvetica,Arial,sans-serif" font-size="22" font-weight="700" fill="{th["ink"]}">Contribution cloth</text>')
     out.append(f'<text x="{x1}" y="50" text-anchor="end" font-family="Archivo,Helvetica,Arial,sans-serif" font-size="14" fill="{th["ink2"]}">'
-               + (f'{total:,} contributions in the last year' if total else 'Updates daily from GitHub contributions') + '</text>')
+               + f'{total:,} {metric} in the last year' + '</text>')
 
     sway = ('<animateTransform attributeName="transform" type="skewX" values="0;.8;0;-.6;0" dur="10s" '
             'repeatCount="indefinite" calcMode="spline" keySplines=".45 0 .55 1;.45 0 .55 1;.45 0 .55 1;.45 0 .55 1"/>')
@@ -196,7 +260,7 @@ def draw(total, weeks, mode, login):
         out.append(f'<rect x="{lx + k * 20}" y="{H - 35}" width="14" height="14" rx="3" fill="{RAMP[mode][k]}" stroke="{th["mesh"]}"/>')
     out.append(f'<text x="{lx + 5 * 20 + 4}" y="{H - 24}" font-family="Archivo,Helvetica,Arial,sans-serif" font-size="12" fill="{th["ink3"]}">More</text>')
     out.append(f'<text x="{x0}" y="{H - 24}" font-family="Archivo,Helvetica,Arial,sans-serif" font-size="12" fill="{th["ink3"]}">'
-               f'Each day is a cell of the cloth; contributions hang weights that pull the fabric down. Updated {dt.date.today().isoformat()}.</text>')
+               f'{source_note} · Updated {dt.datetime.now(dt.timezone.utc).date().isoformat()}.</text>')
     out.append('</g>')
     out.append(f'<rect x=".5" y=".5" width="{W - 1}" height="{H - 1}" rx="21.5" fill="none" stroke="{th["line"]}" stroke-opacity=".7"/>')
     out.append('</svg>')
@@ -207,26 +271,26 @@ def main():
     login = sys.argv[1] if len(sys.argv) > 1 else 'soz1p'
     outdir = sys.argv[2] if len(sys.argv) > 2 else 'assets'
     token = os.environ.get('GITHUB_TOKEN')
-    total, weeks = empty_weeks()
-    if '--empty' not in sys.argv:
+    source = 'calendar'
+    if '--empty' in sys.argv:
+        total, weeks = empty_weeks()
+    else:
+        total, weeks = 0, []
         if token:
             try:
                 total, weeks = fetch(login, token)
-            except Exception as e:  # keep going with the public page
-                print('GraphQL failed:', e)
-        if total == 0:
-            # The Actions token cannot see private-contribution counts; the public page can.
-            try:
-                got = scrape(login)
-                if got and got[0] > 0:
-                    total, weeks = got
             except Exception as e:
-                print('Public calendar failed:', e)
+                print('GraphQL calendar unavailable:', e)
+        if not total:
+            # Hidden profile activity can return a successful but empty calendar.
+            # Use verified public commit history rather than scraping hidden activity.
+            total, weeks = public_commits(login, token)
+            source = 'public'
     os.makedirs(outdir, exist_ok=True)
     for mode in THEMES:
         with open(os.path.join(outdir, f'contribution-cloth-{mode}.svg'), 'w') as f:
-            f.write(draw(total, weeks, mode, login))
-    print(f'{login}: {total} contributions, {len(weeks)} weeks')
+            f.write(draw(total, weeks, mode, login, source))
+    print(f'{login}: {total} {source} events, {len(weeks)} weeks')
 
 
 if __name__ == '__main__':
