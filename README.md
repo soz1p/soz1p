@@ -5,6 +5,7 @@
 <p align="center">
   <a href="https://soz1p.github.io/jeon-sojin-portfolio/"><img src="https://img.shields.io/badge/PORTFOLIO-f2551d?style=for-the-badge" alt="Portfolio"></a>
   <a href="https://soz1p.github.io/jeon-sojin-portfolio/files/jeon-sojin-cv-en.pdf"><img src="https://img.shields.io/badge/CV-273441?style=for-the-badge" alt="English CV"></a>
+  <a href="https://soz1p.github.io/jeon-sojin-portfolio/files/jeon-sojin-cv.pdf"><img src="https://img.shields.io/badge/CV_KO-273441?style=for-the-badge" alt="Korean CV"></a>
   <a href="mailto:soz1p@naver.com"><img src="https://img.shields.io/badge/EMAIL-273441?style=for-the-badge" alt="Email"></a>
 </p>
 
@@ -47,40 +48,42 @@ flowchart LR
 <table>
 <tr>
 <td width="50%" valign="top">
-<a href="https://soz1p.github.io/jeon-sojin-portfolio/#projects"><img src="https://soz1p.github.io/jeon-sojin-portfolio/img/stc-figure5.jpg" alt="STC published comparison" width="100%"></a>
+<a href="https://github.com/soz1p/STC-Showcase"><img src="https://soz1p.github.io/jeon-sojin-portfolio/img/stc-figure5.jpg" alt="STC published comparison" width="100%"></a>
 <h3>01 / STC</h3>
 <b>Skin Tension Constraint</b><br>
 삼각형 면적 기반 피부 인장 제약 설계 및 CUDA PBD 통합.<br><br>
 <b>+3.23–7.66%</b> 병렬 리샘플링 시간 증가율<br>
 <sub>2025년 게재 논문 · 3개 해상도 비교</sub><br><br>
 <a href="https://doi.org/10.15701/kcgs.2025.31.4.21">Publication ↗</a>
+<br><a href="https://github.com/soz1p/STC-Showcase">Research Overview ↗</a>
 </td>
 <td width="50%" valign="top">
-<a href="https://soz1p.github.io/jeon-sojin-portfolio/#projects"><img src="https://soz1p.github.io/jeon-sojin-portfolio/img/vdr-pipeline.png" alt="VDR hybrid deformation framework" width="100%"></a>
+<a href="https://github.com/soz1p/VDR-Showcase"><img src="https://soz1p.github.io/jeon-sojin-portfolio/img/vdr-pipeline.png" alt="VDR hybrid deformation framework" width="100%"></a>
 <h3>02 / VDR</h3>
 <b>Hybrid Volume Deformation &amp; Rendering</b><br>
 HP-ChainMail warm-start 및 활성 블록 기반 PBD 제한 보정.<br><br>
-<b>10.77× / 7.96×</b> PBD 보정 단계 속도 향상<br>
+<b>10.77× / 7.96×</b> PBD 보정 반복 평균 시간 기준 속도 향상<br>
 <sub>2026 석사학위논문 · Small / Medium · 동일 warm-start</sub><br><br>
-<a href="https://soz1p.github.io/jeon-sojin-portfolio/#projects">Research overview ↗</a>
+<a href="https://github.com/soz1p/VDR-Showcase">Research overview ↗</a>
 </td>
 </tr>
 <tr>
 <td valign="top">
-<a href="https://soz1p.github.io/jeon-sojin-portfolio/#projects"><img src="https://soz1p.github.io/jeon-sojin-portfolio/img/ndr-flow.png" alt="NeRF PBD resampling pipeline" width="100%"></a>
+<a href="https://github.com/soz1p/NeuralDynaRender-Showcase"><img src="https://soz1p.github.io/jeon-sojin-portfolio/img/ndr-flow.png" alt="NeRF PBD resampling pipeline" width="100%"></a>
 <h3>03 / NeuralDynaRender</h3>
 <b>NeRF × PBD × CUDA</b><br>
 NeRF RGBA 볼륨과 PBD 격자의 결합, float4 샘플링 및 병렬 리샘플링.<br><br>
 <sub>2024 캡스톤 · 4인 팀 · 공저 논문</sub><br>
 <a href="https://www.kci.go.kr/kciportal/landing/article.kci?arti_id=ART003103457">Publication ↗</a>
+<br><a href="https://github.com/soz1p/NeuralDynaRender-Showcase">Research Overview ↗</a>
 </td>
 <td valign="top">
-<a href="https://soz1p.github.io/jeon-sojin-portfolio/#projects"><img src="https://soz1p.github.io/jeon-sojin-portfolio/img/qtgtcg-multiview.png" alt="Four-view OpenGL geometry viewer" width="100%"></a>
+<a href="https://github.com/soz1p/QtGTCG-Showcase"><img src="https://soz1p.github.io/jeon-sojin-portfolio/img/qtgtcg-multiview.png" alt="Four-view OpenGL geometry viewer" width="100%"></a>
 <h3>04 / QtGTCG</h3>
 <b>OpenGL Multiview Geometry Viewer</b><br>
 기하 데이터, 카메라 및 투영 행렬, GLSL 렌더링을 Qt 4분할 뷰어로 구현.<br><br>
 <sub>Graphics mathematics · Top / Front / Side / Perspective</sub><br>
-<a href="https://soz1p.github.io/jeon-sojin-portfolio/#projects">Project overview ↗</a>
+<a href="https://github.com/soz1p/QtGTCG-Showcase">Source Code ↗</a>
 </td>
 </tr>
 </table>
@@ -89,10 +92,14 @@ NeRF RGBA 볼륨과 PBD 격자의 결합, float4 샘플링 및 병렬 리샘플�
 
 | Project | Focus |
 | :--- | :--- |
-| [Edge of Survival](https://soz1p.github.io/jeon-sojin-portfolio/#projects) | Unity · C# · Photon PUN 2 · 멀티플레이 및 게임 이벤트 |
-| [Fire Evacuation](https://soz1p.github.io/jeon-sojin-portfolio/#projects) | Unity · C# · 3D 대피 시뮬레이션 및 상태 관리 |
+| [Edge of Survival](https://github.com/soz1p/Edge-of-Survival-Showcase) | Unity · C# · Photon PUN 2 · 멀티플레이 및 게임 이벤트 |
+| [Fire Evacuation](https://github.com/soz1p/Fire-Evacuation-Showcase) | Unity · C# · 3D 대피 시뮬레이션 및 상태 관리 |
 
 <sub>공동 연구의 소스코드는 비공개로 유지하며 공개 가능한 연구 결과와 개인 기여를 포트폴리오에서 소개합니다.</sub>
+
+## Thesis
+
+[CT 영상 기반 변형 시뮬레이션을 위한 혼합형 프레임워크](https://dspace.hansung.ac.kr/handle/2024.oak/10820) · 전소진 · 한성대학교 석사학위논문 · 2026
 
 ## Publications
 
