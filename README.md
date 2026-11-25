@@ -48,7 +48,7 @@ flowchart LR
 <table>
 <tr>
 <td width="50%" valign="top">
-<a href="https://github.com/soz1p/STC-Showcase"><img src="https://soz1p.github.io/jeon-sojin-portfolio/img/stc-figure5.jpg" alt="STC published comparison" width="100%"></a>
+<p align="center"><a href="https://github.com/soz1p/STC-Showcase"><img src="https://soz1p.github.io/jeon-sojin-portfolio/img/stc-figure5.jpg" alt="STC published comparison" width="240"></a></p>
 <h3>01 / STC</h3>
 <b>Skin Tension Constraint</b><br>
 삼각형 면적 기반 피부 인장 제약 설계 및 CUDA PBD 통합.<br><br>
@@ -64,12 +64,12 @@ flowchart LR
 HP-ChainMail warm-start 및 활성 블록 기반 PBD 제한 보정.<br><br>
 <b>10.77× / 7.96×</b> PBD 보정 반복 평균 시간 기준 속도 향상<br>
 <sub>2026 석사학위논문 · Small / Medium · 동일 warm-start</sub><br><br>
-<a href="https://github.com/soz1p/VDR-Showcase">Research overview ↗</a>
+<a href="https://github.com/soz1p/VDR-Showcase">Research Overview ↗</a>
 </td>
 </tr>
 <tr>
 <td valign="top">
-<a href="https://github.com/soz1p/NeuralDynaRender-Showcase"><img src="https://soz1p.github.io/jeon-sojin-portfolio/img/ndr-flow.png" alt="NeRF PBD resampling pipeline" width="100%"></a>
+<p align="center"><a href="https://github.com/soz1p/NeuralDynaRender-Showcase"><img src="https://soz1p.github.io/jeon-sojin-portfolio/img/ndr-flow.png" alt="NeRF PBD resampling pipeline" width="300"></a></p>
 <h3>03 / NeuralDynaRender</h3>
 <b>NeRF × PBD × CUDA</b><br>
 NeRF RGBA 볼륨과 PBD 격자의 결합, float4 샘플링 및 병렬 리샘플링.<br><br>
