@@ -18,6 +18,10 @@ Graphics engineer with an M.S. in Computer Engineering from Hansung University (
 
 <br>
 
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/contribution-cloth-dark.svg"><img src="assets/contribution-cloth-light.svg" alt="The last year of GitHub contributions drawn as a pinned cloth; busier days hang heavier weights and darker colours." width="100%"></picture>
+
+<br>
+
 <picture><source media="(prefers-color-scheme: dark)" srcset="assets/title-projects-dark.svg"><img src="assets/title-projects-light.svg" alt="Selected projects" width="100%"></picture>
 
 <table>
