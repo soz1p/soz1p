@@ -27,26 +27,26 @@ Graphics engineer with an M.S. in Computer Engineering from Hansung University (
 <table>
 <tr>
 <td width="50%" valign="top">
-<a href="https://soz1p.github.io/jeon-sojin-portfolio/?lang=en#p-stc"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/card-stc-dark.svg"><img src="assets/card-stc-light.svg" alt="STC: Skin Tension Constraint for PBD" width="100%"></picture></a>
-<p><sub>3.23–7.66% extra parallel resampling time for a new surface-tension response, across three CT resolutions.</sub></p>
-<p><a href="https://github.com/soz1p/STC-Showcase">Research overview ↗</a> &nbsp;·&nbsp; <a href="https://soz1p.github.io/jeon-sojin-portfolio/?lang=en#p-stc">Project page ↗</a></p>
-</td>
-<td width="50%" valign="top">
 <a href="https://soz1p.github.io/jeon-sojin-portfolio/?lang=en#p-vdr"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/card-vdr-dark.svg"><img src="assets/card-vdr-light.svg" alt="VDR: Hybrid HP-ChainMail + PBD deformation" width="100%"></picture></a>
 <p><sub>10.77× / 7.96× faster PBD correction (Small / Medium) than full-domain correction under the same warm start.</sub></p>
 <p><a href="https://github.com/soz1p/VDR-Showcase">Research overview ↗</a> &nbsp;·&nbsp; <a href="https://github.com/soz1p/CUDA-PBD-Sandbox">Public demo code ↗</a> &nbsp;·&nbsp; <a href="https://soz1p.github.io/jeon-sojin-portfolio/?lang=en#p-vdr">Project page ↗</a></p>
 </td>
+<td width="50%" valign="top">
+<a href="https://soz1p.github.io/jeon-sojin-portfolio/?lang=en#p-stc"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/card-stc-dark.svg"><img src="assets/card-stc-light.svg" alt="STC: Skin Tension Constraint for PBD" width="100%"></picture></a>
+<p><sub>3.23–7.66% extra parallel resampling time for a new surface-tension response, across three CT resolutions.</sub></p>
+<p><a href="https://github.com/soz1p/STC-Showcase">Research overview ↗</a> &nbsp;·&nbsp; <a href="https://soz1p.github.io/jeon-sojin-portfolio/?lang=en#p-stc">Project page ↗</a></p>
+</td>
 </tr>
 <tr>
-<td width="50%" valign="top">
-<a href="https://soz1p.github.io/jeon-sojin-portfolio/?lang=en#p-ndr"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/card-ndr-dark.svg"><img src="assets/card-ndr-light.svg" alt="NeuralDynaRender: NeRF volumes with PBD and CUDA resampling" width="100%"></picture></a>
-<p><sub>256³ RGBA NeRF volume deformed on a 64³ PBD grid with float4 parallel resampling.</sub></p>
-<p><a href="https://github.com/soz1p/NeuralDynaRender-Showcase">Research overview ↗</a> &nbsp;·&nbsp; <a href="https://soz1p.github.io/jeon-sojin-portfolio/?lang=en#p-ndr">Project page ↗</a></p>
-</td>
 <td width="50%" valign="top">
 <a href="https://soz1p.github.io/jeon-sojin-portfolio/?lang=en#p-qtgtcg"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/card-qtgtcg-dark.svg"><img src="assets/card-qtgtcg-light.svg" alt="QtGTCG: four-view geometry viewer" width="100%"></picture></a>
 <p><sub>Top, front, side and perspective views of the same scene, built while studying GTCG.</sub></p>
 <p><a href="https://github.com/soz1p/QtGTCG-Showcase">Source code ↗</a> &nbsp;·&nbsp; <a href="https://soz1p.github.io/jeon-sojin-portfolio/?lang=en#p-qtgtcg">Project page ↗</a></p>
+</td>
+<td width="50%" valign="top">
+<a href="https://soz1p.github.io/jeon-sojin-portfolio/?lang=en#p-ndr"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/card-ndr-dark.svg"><img src="assets/card-ndr-light.svg" alt="NeuralDynaRender: NeRF volumes with PBD and CUDA resampling" width="100%"></picture></a>
+<p><sub>256³ RGBA NeRF volume deformed on a 64³ PBD grid with float4 parallel resampling.</sub></p>
+<p><a href="https://github.com/soz1p/NeuralDynaRender-Showcase">Research overview ↗</a> &nbsp;·&nbsp; <a href="https://soz1p.github.io/jeon-sojin-portfolio/?lang=en#p-ndr">Project page ↗</a></p>
 </td>
 </tr>
 <tr>
