@@ -34,7 +34,7 @@ Graphics engineer with an M.S. in Computer Engineering from Hansung University (
 <td width="50%" valign="top">
 <a href="https://soz1p.github.io/jeon-sojin-portfolio/?lang=en#p-vdr"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/card-vdr-dark.svg"><img src="assets/card-vdr-light.svg" alt="VDR: Hybrid HP-ChainMail + PBD deformation" width="100%"></picture></a>
 <p><sub>10.77× / 7.96× faster PBD correction (Small / Medium) than full-domain correction under the same warm start.</sub></p>
-<p><a href="https://github.com/soz1p/VDR-Showcase">Research overview ↗</a> &nbsp;·&nbsp; <a href="https://soz1p.github.io/jeon-sojin-portfolio/?lang=en#p-vdr">Project page ↗</a></p>
+<p><a href="https://github.com/soz1p/VDR-Showcase">Research overview ↗</a> &nbsp;·&nbsp; <a href="https://github.com/soz1p/CUDA-PBD-Sandbox">Public demo code ↗</a> &nbsp;·&nbsp; <a href="https://soz1p.github.io/jeon-sojin-portfolio/?lang=en#p-vdr">Project page ↗</a></p>
 </td>
 </tr>
 <tr>
@@ -47,20 +47,6 @@ Graphics engineer with an M.S. in Computer Engineering from Hansung University (
 <a href="https://soz1p.github.io/jeon-sojin-portfolio/?lang=en#p-qtgtcg"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/card-qtgtcg-dark.svg"><img src="assets/card-qtgtcg-light.svg" alt="QtGTCG: four-view geometry viewer" width="100%"></picture></a>
 <p><sub>Top, front, side and perspective views of the same scene, built while studying GTCG.</sub></p>
 <p><a href="https://github.com/soz1p/QtGTCG-Showcase">Source code ↗</a> &nbsp;·&nbsp; <a href="https://soz1p.github.io/jeon-sojin-portfolio/?lang=en#p-qtgtcg">Project page ↗</a></p>
-</td>
-</tr>
-<tr>
-<td width="50%" valign="top">
-<a href="https://github.com/soz1p/CUDA-PBD-Sandbox"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/card-sbx-dark.svg"><img src="assets/card-sbx-light.svg" alt="CUDA-PBD-Sandbox: active-block GPU PBD, rebuilt from scratch" width="100%"></picture></a>
-<p><a href="https://github.com/soz1p/CUDA-PBD-Sandbox">Source code ↗</a> &nbsp;·&nbsp; <a href="https://soz1p.github.io/jeon-sojin-portfolio/?lang=en#p-sbx">Project page ↗</a></p>
-</td>
-<td width="50%" valign="top">
-<p><b>Public code sample</b> of the active-block idea from my master's thesis, written from scratch on a synthetic cloth so the code can be shared.</p>
-<ul>
-<li><b>2.16×</b> faster GPU correction than global on a locally deformed 96×96 cloth (RTX 3090), with 28.7% of blocks active on average.</li>
-<li>Blocks sleep only after 30 calm frames, and a frame with more than 70% active blocks falls back to the global path, so it never loses.</li>
-<li>Win32 + OpenGL 3.3 viewer with a compare mode that runs global and active side by side on the same input.</li>
-</ul>
 </td>
 </tr>
 <tr>
