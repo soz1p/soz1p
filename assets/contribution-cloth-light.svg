@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="330" viewBox="0 0 1200 330" role="img" aria-label="58 public portfolio commits by soz1p in the last year, drawn as a pinned cloth">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="330" viewBox="0 0 1200 330" role="img" aria-label="71 public portfolio commits by soz1p in the last year, drawn as a pinned cloth">
 <defs>
 <filter id="b" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="70"/></filter>
 <clipPath id="c"><rect width="1200" height="330" rx="22"/></clipPath>
@@ -6,7 +6,7 @@
 <g clip-path="url(#c)"><rect width="1200" height="330" fill="#ffffff"/>
 <g filter="url(#b)" opacity="0.5"><circle cx="120" cy="40" r="170" fill="#4fb3c4"/><circle cx="560" cy="-10" r="150" fill="#f6a04a"/><circle cx="1100" cy="80" r="180" fill="#e8a0b8"/><circle cx="760" cy="330" r="170" fill="#8b81c3"/></g>
 <text x="60" y="50" font-family="Archivo,Helvetica,Arial,sans-serif" font-size="22" font-weight="700" fill="#15181b">Contribution cloth</text>
-<text x="1140" y="50" text-anchor="end" font-family="Archivo,Helvetica,Arial,sans-serif" font-size="14" fill="#4b535b">58 public portfolio commits in the last year</text>
+<text x="1140" y="50" text-anchor="end" font-family="Archivo,Helvetica,Arial,sans-serif" font-size="14" fill="#4b535b">71 public portfolio commits in the last year</text>
 <g transform="translate(0 92)"><g><animateTransform attributeName="transform" type="skewX" values="0;.8;0;-.6;0" dur="10s" repeatCount="indefinite" calcMode="spline" keySplines=".45 0 .55 1;.45 0 .55 1;.45 0 .55 1;.45 0 .55 1"/><g transform="translate(0 -92)">
 <path d="M60.0 92.0L80.4 92.0L80.5 112.3L60.1 112.1Z" fill="#f0f1f4" stroke="rgba(21,24,27,.09)" stroke-width=".7"/>
 <path d="M80.4 92.0L100.8 92.0L100.9 112.5L80.5 112.3Z" fill="#f0f1f4" stroke="rgba(21,24,27,.09)" stroke-width=".7"/>
@@ -217,9 +217,9 @@
 <path d="M1017.3 153.9L1037.6 154.3L1037.6 175.6L1017.2 175.1Z" fill="#eeeff2" stroke="rgba(21,24,27,.09)" stroke-width=".7"/>
 <path d="M1037.6 154.3L1058.0 154.3L1058.2 175.6L1037.6 175.6Z" fill="#eeeff2" stroke="rgba(21,24,27,.09)" stroke-width=".7"/>
 <path d="M1058.0 154.3L1078.4 154.0L1078.7 175.2L1058.2 175.6Z" fill="#eeeff2" stroke="rgba(21,24,27,.09)" stroke-width=".7"/>
-<path d="M1078.4 154.0L1098.9 153.4L1099.3 187.5L1078.7 175.2Z" fill="#dfdfe2" stroke="rgba(21,24,27,.09)" stroke-width=".7"/>
-<path d="M1098.9 153.4L1119.4 152.7L1119.8 197.4L1099.3 187.5Z" fill="#c2c3c5" stroke="rgba(21,24,27,.09)" stroke-width=".7"/>
-<path d="M1119.4 152.7L1139.9 152.1L1140.4 189.4L1119.8 197.4Z" fill="#aeabbf" stroke="rgba(21,24,27,.09)" stroke-width=".7"/>
+<path d="M1078.4 154.0L1098.9 153.4L1099.3 182.4L1078.7 175.2Z" fill="#e5e6e9" stroke="rgba(21,24,27,.09)" stroke-width=".7"/>
+<path d="M1098.9 153.4L1119.4 152.7L1119.8 188.0L1099.3 182.4Z" fill="#d4d5d7" stroke="rgba(21,24,27,.09)" stroke-width=".7"/>
+<path d="M1119.4 152.7L1139.9 152.1L1140.4 182.8L1119.8 188.0Z" fill="#d34a19" stroke="rgba(21,24,27,.09)" stroke-width=".7"/>
 <path d="M59.7 174.0L79.9 174.9L79.6 196.2L59.2 195.1Z" fill="#eeeff2" stroke="rgba(21,24,27,.09)" stroke-width=".7"/>
 <path d="M79.9 174.9L100.2 175.5L100.0 197.0L79.6 196.2Z" fill="#eeeff2" stroke="rgba(21,24,27,.09)" stroke-width=".7"/>
 <path d="M100.2 175.5L120.5 175.7L120.5 197.2L100.0 197.0Z" fill="#edeef1" stroke="rgba(21,24,27,.09)" stroke-width=".7"/>
@@ -270,9 +270,9 @@
 <path d="M1017.2 175.1L1037.6 175.6L1038.2 197.1L1017.5 196.5Z" fill="#eeeef1" stroke="rgba(21,24,27,.09)" stroke-width=".7"/>
 <path d="M1037.6 175.6L1058.2 175.6L1058.8 197.1L1038.2 197.1Z" fill="#edeef1" stroke="rgba(21,24,27,.09)" stroke-width=".7"/>
 <path d="M1058.2 175.6L1078.7 175.2L1079.3 196.6L1058.8 197.1Z" fill="#edeef1" stroke="rgba(21,24,27,.09)" stroke-width=".7"/>
-<path d="M1078.7 175.2L1099.3 187.5L1099.9 208.7L1079.3 196.6Z" fill="#eeeff2" stroke="rgba(21,24,27,.09)" stroke-width=".7"/>
-<path d="M1099.3 187.5L1119.8 197.4L1120.4 218.4L1099.9 208.7Z" fill="#eeeff2" stroke="rgba(21,24,27,.09)" stroke-width=".7"/>
-<path d="M1119.8 197.4L1140.4 189.4L1140.8 210.2L1120.4 218.4Z" fill="#eff0f3" stroke="rgba(21,24,27,.09)" stroke-width=".7"/>
+<path d="M1078.7 175.2L1099.3 182.4L1099.9 203.6L1079.3 196.6Z" fill="#eeeff2" stroke="rgba(21,24,27,.09)" stroke-width=".7"/>
+<path d="M1099.3 182.4L1119.8 188.0L1120.4 208.9L1099.9 203.6Z" fill="#eeeff2" stroke="rgba(21,24,27,.09)" stroke-width=".7"/>
+<path d="M1119.8 188.0L1140.4 182.8L1140.8 203.6L1120.4 208.9Z" fill="#eff0f3" stroke="rgba(21,24,27,.09)" stroke-width=".7"/>
 <path d="M59.2 195.1L79.6 196.2L79.9 217.8L59.3 216.4Z" fill="#edeef1" stroke="rgba(21,24,27,.09)" stroke-width=".7"/>
 <path d="M79.6 196.2L100.0 197.0L100.5 218.7L79.9 217.8Z" fill="#edeef1" stroke="rgba(21,24,27,.09)" stroke-width=".7"/>
 <path d="M100.0 197.0L120.5 197.2L121.1 219.0L100.5 218.7Z" fill="#edeef1" stroke="rgba(21,24,27,.09)" stroke-width=".7"/>
@@ -323,9 +323,9 @@
 <path d="M1017.5 196.5L1038.2 197.1L1038.9 218.9L1018.3 218.1Z" fill="#edeef1" stroke="rgba(21,24,27,.09)" stroke-width=".7"/>
 <path d="M1038.2 197.1L1058.8 197.1L1059.4 218.9L1038.9 218.9Z" fill="#edeef1" stroke="rgba(21,24,27,.09)" stroke-width=".7"/>
 <path d="M1058.8 197.1L1079.3 196.6L1079.8 218.2L1059.4 218.9Z" fill="#edeef1" stroke="rgba(21,24,27,.09)" stroke-width=".7"/>
-<path d="M1079.3 196.6L1099.9 208.7L1100.2 230.2L1079.8 218.2Z" fill="#edeef1" stroke="rgba(21,24,27,.09)" stroke-width=".7"/>
-<path d="M1099.9 208.7L1120.4 218.4L1120.4 239.6L1100.2 230.2Z" fill="#eeeff2" stroke="rgba(21,24,27,.09)" stroke-width=".7"/>
-<path d="M1120.4 218.4L1140.8 210.2L1140.6 231.2L1120.4 239.6Z" fill="#eeeff2" stroke="rgba(21,24,27,.09)" stroke-width=".7"/>
+<path d="M1079.3 196.6L1099.9 203.6L1100.2 230.2L1079.8 218.2Z" fill="#e7e8eb" stroke="rgba(21,24,27,.09)" stroke-width=".7"/>
+<path d="M1099.9 203.6L1120.4 208.9L1120.4 239.6L1100.2 230.2Z" fill="#dcdde0" stroke="rgba(21,24,27,.09)" stroke-width=".7"/>
+<path d="M1120.4 208.9L1140.8 203.6L1140.6 231.2L1120.4 239.6Z" fill="#c8c4dc" stroke="rgba(21,24,27,.09)" stroke-width=".7"/>
 <path d="M59.3 216.4L79.9 217.8L80.7 239.6L60.0 238.0Z" fill="#edeef1" stroke="rgba(21,24,27,.09)" stroke-width=".7"/>
 <path d="M79.9 217.8L100.5 218.7L101.4 240.7L80.7 239.6Z" fill="#ecedf0" stroke="rgba(21,24,27,.09)" stroke-width=".7"/>
 <path d="M100.5 218.7L121.1 219.0L122.0 241.0L101.4 240.7Z" fill="#ecedf0" stroke="rgba(21,24,27,.09)" stroke-width=".7"/>
@@ -415,7 +415,7 @@
 <rect x="1030" y="295" width="14" height="14" rx="3" fill="#e48aa8" stroke="rgba(21,24,27,.09)"/>
 <rect x="1050" y="295" width="14" height="14" rx="3" fill="#f2551d" stroke="rgba(21,24,27,.09)"/>
 <text x="1074" y="306" font-family="Archivo,Helvetica,Arial,sans-serif" font-size="12" fill="#8b9299">More</text>
-<text x="60" y="306" font-family="Archivo,Helvetica,Arial,sans-serif" font-size="12" fill="#8b9299">Selected public repositories · default branches · UTC · Updated 2026-11-26.</text>
+<text x="60" y="306" font-family="Archivo,Helvetica,Arial,sans-serif" font-size="12" fill="#8b9299">Selected public repositories · default branches · UTC · Updated 2026-11-27.</text>
 </g>
 <rect x=".5" y=".5" width="1199" height="329" rx="21.5" fill="none" stroke="#cdd2d7" stroke-opacity=".7"/>
 </svg>
