@@ -5,7 +5,7 @@
 <a href="https://soz1p.github.io/jeon-sojin-portfolio/?lang=ko"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/btn-portfolio-ko-dark.svg"><img src="assets/btn-portfolio-ko-light.svg" alt="포트폴리오 (한국어)" width="auto" height="42"></picture></a>
 <a href="https://soz1p.github.io/jeon-sojin-portfolio/files/jeon-sojin-cv-en.pdf"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/btn-cv-en-dark.svg"><img src="assets/btn-cv-en-light.svg" alt="CV (English, PDF)" width="auto" height="42"></picture></a>
 <a href="https://soz1p.github.io/jeon-sojin-portfolio/files/jeon-sojin-cv.pdf"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/btn-cv-ko-dark.svg"><img src="assets/btn-cv-ko-light.svg" alt="이력서 (한국어, PDF)" width="auto" height="42"></picture></a>
-<a href="mailto:soz1p@naver.com"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/btn-email-dark.svg"><img src="assets/btn-email-light.svg" alt="Email soz1p@naver.com" width="auto" height="42"></picture></a>
+<a href="mailto:jeonsoz1p@gmail.com"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/btn-email-dark.svg"><img src="assets/btn-email-light.svg" alt="Email jeonsoz1p@gmail.com" width="auto" height="42"></picture></a>
 </p>
 
 <br>
@@ -109,6 +109,6 @@ Graphics engineer with an M.S. in Computer Engineering from Hansung University (
 <br>
 
 <p align="center">
-<a href="https://soz1p.github.io/jeon-sojin-portfolio/?lang=en">Interactive portfolio</a> &nbsp;·&nbsp; <a href="https://soz1p.github.io/jeon-sojin-portfolio/?lang=ko">한국어 포트폴리오</a> &nbsp;·&nbsp; <a href="mailto:soz1p@naver.com">soz1p@naver.com</a><br>
+<a href="https://soz1p.github.io/jeon-sojin-portfolio/?lang=en">Interactive portfolio</a> &nbsp;·&nbsp; <a href="https://soz1p.github.io/jeon-sojin-portfolio/?lang=ko">한국어 포트폴리오</a> &nbsp;·&nbsp; <a href="mailto:jeonsoz1p@gmail.com">jeonsoz1p@gmail.com</a><br>
 <sub>Profile writing and design assisted by Claude and ChatGPT.</sub>
 </p>
