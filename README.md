@@ -76,7 +76,7 @@ Graphics engineer with an M.S. in Computer Engineering from Hansung University (
 <picture><source media="(prefers-color-scheme: dark)" srcset="assets/title-toolkit-dark.svg"><img src="assets/title-toolkit-light.svg" alt="Toolkit" width="100%"></picture>
 
 <p>
-<img alt="C++" src="https://img.shields.io/badge/C%2B%2B-15181b?style=flat-square&logo=cplusplus&logoColor=white">
+<img alt="C/C++" src="https://img.shields.io/badge/C%2FC%2B%2B-15181b?style=flat-square&logo=cplusplus&logoColor=white">
 <img alt="CUDA" src="https://img.shields.io/badge/CUDA-15181b?style=flat-square&logo=nvidia&logoColor=76B900">
 <img alt="OpenGL" src="https://img.shields.io/badge/OpenGL-15181b?style=flat-square&logo=opengl&logoColor=white">
 <img alt="GLSL" src="https://img.shields.io/badge/GLSL-15181b?style=flat-square">
